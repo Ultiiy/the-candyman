@@ -20,7 +20,8 @@
     <div class="menu">
       <ul>
         <li><a href="#"><i class="ri-home-2-fill"></i> Início</a></li>
-        <li><a href="#"><i class="ri-shopping-basket-2-fill"></i> </i> Produtos</a></li>
+        <li><a href="produtos.html"><i class="ri-shopping-basket-2-fill"></i> </i> Produtos</a></li>
+        <li><a href=""><i class="ri-shopping-cart-2-fill"></i> Vendas</a></li>
         <li><a href="funcionarios.html" class="active"><i class="ri-user-fill"></i> Funcionários</a></li>
         <li><a href="#"><i class="ri-bar-chart-2-fill"></i>Relatórios</a></li>
       </ul>
@@ -28,7 +29,7 @@
     <div class="logout">
       <ul>
         <li>Olá, Fulano.</li>
-        <li><a href="index.html">Sair</a></li>
+        <li><button class="anime"><a href=""><i class="ri-door-open-fill"></i>Sair</a></button></li>
       </ul>
     </div>
   </nav>
@@ -39,42 +40,72 @@
       </section>
 
       <section class="acao">
-        <div>
-          <button><i class="ri-user-add-fill"></i> Adicionar</button>
+        <div class="add">
+          <button class="anime"><i class="ri-user-add-fill"></i> Adicionar</button>
+        </div>
+        <div class="filtro">
+          <label for="pesquisaFun"><i class="ri-search-line"></i></label>
+          <input type="text" name="pesquisaFun" id="" size="25" placeholder='Busque por funcionários...'>
         </div>
       </section>
 
       <section class="conteudo">
-        <div>
-          <table>
-            <thead>
-              <tr >
-                <th class="th-title">&emsp;Matricula&emsp;</th>
-                <th class="th-title">&emsp;Nome&emsp;</th>
-                <th class="th-title">&emsp;&emsp;Função&emsp;&emsp;</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>001</td>
-                <td>Fulano</td>
-                <td>Administrador</td>
-                <td class="no-border"><i class="ri-pencil-fill"></i></td>
-              </tr>
-              <tr>
-                <td>002</td>
-                <td>Ciclano</td>
-                <td>Estoquista</td>
-                <td class="no-border"><i class="ri-pencil-fill"></i></td>
-              </tr>
-              <tr>
-                <td>003</td>
-                <td>Beltrano</td>
-                <td>Estoquista</td>
-                <td class="no-border"><i class="ri-pencil-fill"></i></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="container">
+
+          <!-- INICIO -->
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/imagens/default-user.png">
+            </div>
+            <div class="card-info">
+              <ul>
+                <li><b>Matricula</b>: 001</li>
+                <li><b>Nome</b>: Fulano</li>
+                <li><b>Função</b>: Administrador</li>
+              </ul>
+              <div class="card-button">
+                <button class="anime"><a href=""><i class="ri-edit-fill"></i>Editar</a></button>
+              </div>
+            </div>
+          </div>
+          <!-- FIM -->
+
+          <!-- INICIO -->
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/imagens/default-user.png">
+            </div>
+            <div class="card-info">
+              <ul>
+                <li<b>Matricula</b>: 002</li>
+                  <li><b>Nome</b>: Beltrano</li>
+                  <li><b>Função</b>: Estoquista</li>
+              </ul>
+              <div class="card-button">
+                <button class="anime"><a href=""><i class="ri-edit-fill"></i>Editar</a></button>
+              </div>
+            </div>
+          </div>
+          <!-- FIM -->
+
+          <!-- INICIO -->
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/imagens/default-user.png">
+            </div>
+            <div class="card-info">
+              <ul>
+                <li><b>Matricula</b>: 003</li>
+                <li><b>Nome</b>: Sicrano</li>
+                <li><b>Função</b>: Estoquista</li>
+              </ul>
+              <div class="card-button">
+                <button class="anime"><a href=""><i class="ri-edit-fill"></i>Editar</a></button>
+              </div>
+            </div>
+          </div>
+          <!-- FIM -->
+
         </div>
       </section>
     </div>
