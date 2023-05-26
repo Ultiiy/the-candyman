@@ -1,0 +1,92 @@
+main {
+    padding-top: 1.6rem;
+}
+
+#app {
+    height: 100%;
+    background-color: snow;
+    border-top-left-radius: 2rem;
+    padding: 4.4rem 4.4rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.title h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.title h2 {
+    font-size: 2rem;
+}
+
+.pesquisa {
+    display: flex;
+    margin-bottom: 2.5rem;
+}
+
+.filtro {
+    font-size: 16px;
+    margin-left: 1.2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.container .card {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.308);
+    width: 220px;
+    margin: 12px 24px 12px 0;
+    transition: all 0.6s;
+}
+
+.container .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 30px 60px;
+}
+
+.container .card-img {
+    text-align: center;
+}
+
+.container .card-img img {
+    width: 75%;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+
+.container .card-info {
+    font-size: 1.4rem;
+    padding: 2rem;
+}
+
+.container .card-info ul {
+    padding: 0;
+}
+
+.btn {
+    font-size: 16px;
+}
+
+.container .btn {
+    font-size: 14px;
+}
+
+/* ----------------------------------- */
+
+.modal-body input,
+.modal-body label {
+    font-size: 16px;
+}
+
+.modal-body h1 {
+    font-weight: bold;
+    margin-top: 22px;
+}
