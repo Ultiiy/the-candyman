@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>Tavares | Clientes</title>
+    <title>Tavares | Produtos</title>
 </head>
 
 <body>
@@ -17,10 +17,10 @@
             </a><hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li><a href="orcamentos.html" class="nav-link text-white"><i class="bi bi-flag-fill"></i>&ensp;Orçamentos</a></li>
-                <li><a href="clientes.html" class="nav-link text-white active"><i class="bi bi-people-fill"></i>&ensp;Clientes</a></li>
+                <li><a href="clientes.html" class="nav-link text-white"><i class="bi bi-people-fill"></i>&ensp;Clientes</a></li>
                 <li><a href="veiculos.html" class="nav-link text-white"><i class="bi bi-car-front-fill"></i></i>&ensp;Veículos</a></li>
                 <li><a href="servicos.html" class="nav-link text-white"><i class="bi bi-stack"></i>&ensp;Serviços</a></li>
-                <li><a href="produtos.html" class="nav-link text-white"><i class="bi bi-box-seam-fill"></i>&ensp;</i>Produtos</a></li>
+                <li><a href="produtos.html" class="nav-link text-white active"><i class="bi bi-box-seam-fill"></i>&ensp;</i>Produtos</a></li>
                 <li><a href="funcionarios.html" class="nav-link text-white"><i class="bi bi-person-vcard-fill"></i>&ensp;Funcionários</a></li>
                 <li><a href="relatorio.html" class="nav-link text-white"><i class="bi bi-pie-chart-fill"></i>&ensp;Relatórios</a></li>
             </ul><hr>
@@ -36,40 +36,47 @@
         </div>
 
         <div class="p-4" style="margin-left: 18rem;">
-            <h1 class="m-0 fs-1 fw-bold">Clientes</h1><hr>
+            <h1 class="m-0 fs-1 fw-bold">Produtos</h1><hr>
             <div class="d-flex">
                 <div class="me-3">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastrarCliente">Cadastrar cliente</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastrarProduto">Cadastrar produto</button>
 
                     <!-- Modal para cadastrar -->
-                    <div class="modal fade" id="cadastrarCliente" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                    <div class="modal fade" id="cadastrarProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar cliente</h1>
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar produto</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
                                 <div class="modal-body">
                                     <form class="row g-3" action="" method="post">
-                                        <div class="col-md-6">
-                                            <label class="form-label">Nome completo</label>
+                                        <div class="col-md-8">
+                                            <label class="form-label">Nome </label>
                                             <input type="text" class="form-control" id="" name="" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">CPF</label>
+                                            <label class="form-label">Marca</label>
                                             <input type="text" class="form-control" id="" name="" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">E-mail</label>
-                                            <input type="email" class="form-control" id="" name="">
+                                            <label class="form-label">Modelo</label>
+                                            <input type="email" class="form-control" id="" name="" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">Celular</label>
-                                            <input type="text" class="form-control" id="" name="" required>
+                                            <label class="form-label">Preço</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">R$</span>
+                                                <input type="text" class="form-control" id="" name="" required>
+                                            </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <label class="form-label">Endereço</label>
-                                            <input type="text" class="form-control" id="" name="">
+                                        <div class="col-md-4">
+                                            <label class="form-label">Quantidade</label>
+                                            <input type="number" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Observações</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -91,8 +98,9 @@
                     <tr>
                         <th scope="col">CÓDIGO</th>
                         <th scope="col">NOME</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Celular</th>
+                        <th scope="col">MODELO</th>
+                        <th scope="col">QUANTIDADE</th>
+                        <th scope="col">PREÇO</th>
                         <th scope="col">OPÇÕES</th>
                     </tr>
                 </thead>
@@ -100,45 +108,53 @@
                     <!-- Começa aqui (Cada linha da tabela) -->
                     <tr class="">
                         <th scope="row">01</th>
-                        <td>Josivaldo</td>
-                        <td>Josivaldo@gmail.com</td>
-                        <td>(000) 00000-0000</td>
+                        <td>Óleo Lubrificante do Motor</td>
+                        <td>F1 Master Protection SL SAE 20W50 Mineral 1L</td>
+                        <td>6</td>
+                        <td>R$ 28,30</td>
                         <td>
                             <div class="d-grid gap-2 d-md-block">
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#visualizarCliente-01">Visualizar</button>
-                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editarCliente-01">Editar</button>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirCliente-01" title="Deletar"><i class="bi bi-trash"></i></button>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#visualizarProduto-01">Visualizar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editarProduto-01">Editar</button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirProduto-01" title="Deletar"><i class="bi bi-trash"></i></button>
                             </div>
 
                             <!-- Modal para visualizar-->
-                            <div class="modal fade" id="visualizarCliente-01" tabindex="-1">
+                            <div class="modal fade" id="visualizarProduto-01" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar cliente</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar produto</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form class="row g-3" action="" method="post">
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Nome completo</label>
-                                                    <input type="text" class="form-control" id="" name="" value="Josivaldo" disabled>
+                                                <div class="col-md-8">
+                                                    <label class="form-label">Nome </label>
+                                                    <input type="text" class="form-control" id="" name="" value="Óleo Lubrificante do Motor" disabled>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">CPF</label>
-                                                    <input type="text" class="form-control" id="" name="" value="000.000.000-00" disabled>
+                                                    <label class="form-label">Marca</label>
+                                                    <input type="text" class="form-control" id="" name="" value="Ipiranga" disabled>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">E-mail</label>
-                                                    <input type="email" class="form-control" id="" name="" value="josivaldo@gmail.com" disabled>
+                                                    <label class="form-label">Modelo</label>
+                                                    <input type="email" class="form-control" id="" name="" value="F1 Master Protection SL SAE 20W50 Mineral 1L" disabled>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">Celular</label>
-                                                    <input type="text" class="form-control" id="" name="" value="(000) 00000-0000" disabled>
+                                                    <label class="form-label">Preço</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">R$</span>
+                                                        <input type="number" class="form-control" id="" name="" value="28.30" disabled>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Endereço</label>
-                                                    <input type="text" class="form-control" id="" name="" value="endereço tal, rua tal" disabled>
+                                                <div class="col-md-4">
+                                                    <label class="form-label">Quantidade</label>
+                                                    <input type="number" class="form-control" id="" name="" value="6" disabled>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlTextarea1" class="form-label">Observações</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" disabled>Lubrificante Mineral Multiviscoso Sae 20w50 Para Motores Quatros Tempos Movidos A Gasolina, Etanol, Gás Natural E Flex De Veículos Nacionais Ou Importados Multiválvulas De Injeção Eletrônica E Anteriores.</textarea>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -150,35 +166,41 @@
                             </div>
 
                             <!-- Modal para editar -->
-                            <div class="modal fade" id="editarCliente-01" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1">
+                            <div class="modal fade" id="editarProduto-01" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5">Editar cliente</h1>
+                                            <h1 class="modal-title fs-5">Editar produto</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                         </div>
                                         <div class="modal-body">
                                             <form class="row g-3" action="" method="post">
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Nome completo</label>
-                                                    <input type="text" class="form-control" id="" name="" value="Josivaldo" required>
+                                                <div class="col-md-8">
+                                                    <label class="form-label">Nome </label>
+                                                    <input type="text" class="form-control" id="" name="" value="Óleo Lubrificante do Motor" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">CPF</label>
-                                                    <input type="text" class="form-control" id="" name="" value="000.000.000-00" required>
+                                                    <label class="form-label">Marca</label>
+                                                    <input type="text" class="form-control" id="" name="" value="Ipiranga" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">E-mail</label>
-                                                    <input type="email" class="form-control" id="" name="" value="josivaldo@gmail.com">
+                                                    <label class="form-label">Modelo</label>
+                                                    <input type="email" class="form-control" id="" name="" value="F1 Master Protection SL SAE 20W50 Mineral 1L" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">Celular</label>
-                                                    <input type="text" class="form-control" id="" name="" value="(000) 00000-0000" required>
+                                                    <label class="form-label">Preço</label>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text">R$</span>
+                                                        <input type="text" class="form-control" id="" name="" value="28.30" required>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-12">
-                                                    <label class="form-label">Endereço</label>
-                                                    <input type="text" class="form-control" id="" name="" value="endereço tal, rua tal" required>
+                                                <div class="col-md-4">
+                                                    <label class="form-label">Quantidade</label>
+                                                    <input type="number" class="form-control" id="" name="" value="6" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlTextarea1" class="form-label">Observações</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Lubrificante Mineral Multiviscoso Sae 20w50 Para Motores Quatros Tempos Movidos A Gasolina, Etanol, Gás Natural E Flex De Veículos Nacionais Ou Importados Multiválvulas De Injeção Eletrônica E Anteriores.</textarea>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -191,14 +213,14 @@
                             </div>
 
                             <!-- Modal para excluir -->
-                            <div class="modal fade" id="excluirCliente-01" tabindex="-1">
+                            <div class="modal fade" id="excluirProduto-01" tabindex="-1">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header bg-danger" data-bs-theme="dark">
-                                            <h1 class="modal-title fs-5 text-white">Excluir cliente</h1>
+                                            <h1 class="modal-title fs-5 text-white">Excluir produto</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                         </div>
-                                        <div class="modal-body">Tem certeza que deseja excluir o cadastro do cliente?</div>
+                                        <div class="modal-body">Tem certeza que deseja excluir o cadastro do produto?</div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                             <button type="button" class="btn btn-danger">Excluir</button>

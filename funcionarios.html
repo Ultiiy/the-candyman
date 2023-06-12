@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Tavares | Funcionários</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="fixed-bottom d-flex flex-column p-3 text-bg-dark h-100" style="width: 280px;">
+            <a href="index.html" class="text-decoration-none text-white">
+                <h1 class="text-center">Tavares</h1>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li><a href="orcamentos.html" class="nav-link text-white"><i class="bi bi-flag-fill"></i>&ensp;Orçamentos</a></li>
+                <li><a href="clientes.html" class="nav-link text-white"><i class="bi bi-people-fill"></i>&ensp;Clientes</a></li>
+                <li><a href="veiculos.html" class="nav-link text-white"><i class="bi bi-car-front-fill"></i></i>&ensp;Veículos</a></li>
+                <li><a href="servicos.html" class="nav-link text-white"><i class="bi bi-stack"></i>&ensp;Serviços</a></li>
+                <li><a href="produtos.html" class="nav-link text-white"><i class="bi bi-box-seam-fill"></i>&ensp;</i>Produtos</a></li>
+                <li><a href="funcionarios.html" class="nav-link text-white active"><i class="bi bi-person-vcard-fill"></i>&ensp;Funcionários</a></li>
+                <li><a href="relatorio.html" class="nav-link text-white"><i class="bi bi-pie-chart-fill"></i>&ensp;Relatórios</a></li>
+            </ul><hr>
+            <div class="dropdown">
+                <span class="m-0 d-flex align-items-center text-decoration-none dropdown-toggle" style="cursor: pointer;" data-bs-toggle="dropdown">
+                    <img src="https://www.gov.br/cdn/sso-status-bar/src/image/user.png" width="34" height="34" class="rounded-circle me-2">
+                    <strong>Fulano</strong>
+                </span>
+                <ul class="dropdown-menu dropdown-menu-dark shadow">
+                    <li><a class="dropdown-item" href="login.html"><i class="bi bi-door-open-fill"></i>&ensp;Deslogar</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="p-4" style="margin-left: 18rem;">
+            <h1 class="m-0 fs-1 fw-bold">Funcionários</h1><hr>
+            <div class="d-flex">
+                <div class="me-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastrarFuncionario">Cadastrar funcionário</button>
+
+                    <!-- Modal para cadastrar -->
+                    <div class="modal fade" id="cadastrarFuncionario" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Cadastrar funcionário</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3" action="" method="post">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Nome completo</label>
+                                            <input type="text" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">CPF</label>
+                                            <input type="text" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">E-mail</label>
+                                            <input type="email" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Celular</label>
+                                            <input type="text" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Função</label>
+                                            <select class="form-select" id="" name="" required>
+                                                <option selected disabled>Selecione...</option>
+                                                <option value="administrador">Administrador</option>
+                                                <option value="mecanico-chefe">Mecânico-Chefe</option>
+                                                <option value="mecanico">Mecânico</option>
+                                            </select>
+                                        </div><hr>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Login</label>
+                                            <input type="text" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group w-50">
+                    <input type="search" class="form-control" id="" name="" placeholder="Pesquise...">
+                    <button type="submit" class="btn btn-outline-secondary" id="button-addon2"><i class="bi bi-search"></i></button>
+                </div>
+            </div><br>
+            <div class="cards-fun d-flex flex-wrap">
+
+                <!-- Inicio do card -->
+                <div class="card shadow me-3 mt-3" style="width: 15rem; height: 26.3rem;">
+                    <img src="https://www.gov.br/cdn/sso-status-bar/src/image/user.png" class="recard-img-top">
+                    <div class="card-body">
+                        <ul class="card-text p-0" type="none">
+                            <li><b>Matrícula</b>: 0001</li>
+                            <li><b>Nome</b>: Fulano</li>
+                            <li><b>Função</b>: Administrador</li>
+                            <li><b>Status</b>: Ativo</li>
+                        </ul>
+                        <div class="btn-group d-flex" role="group">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#visualizarFuncionario-01">Visualizar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editarFuncionario-01">Editar</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirFuncionario-01" title="Deletar"><i class="bi bi-trash"></i></button>
+                        </div>
+
+                        <!-- Modal para visualizar -->
+                        <div class="modal fade" id="visualizarFuncionario-01" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Visualizar funcionário</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="row g-3" action="" method="post">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Nome completo</label>
+                                                <input type="text" class="form-control" id="" name="" value="Fulano Estranho" disabled>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">CPF</label>
+                                                <input type="text" class="form-control" id="" name="" value="000.000.000-00" disabled>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">E-mail</label>
+                                                <input type="email" class="form-control" id="" name="" value="fulano@gmail.com" disabled>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Celular</label>
+                                                <input type="text" class="form-control" id="" name="" value="(000) 00000-0000" disabled>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Função</label>
+                                                <select class="form-select" id="" name="" disabled>
+                                                    <option disabled>Selecione...</option>
+                                                    <option value="administrador" selected>Administrador</option>
+                                                    <option value="mecanico-chefe">Mecânico-Chefe</option>
+                                                    <option value="mecanico">Mecânico</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Status</label>
+                                                <select class="form-select" id="" name="" disabled>
+                                                    <option disabled>Selecione...</option>
+                                                    <option value="administrador" selected>Ativo</option>
+                                                    <option value="mecanico-chefe">Inativo</option>
+                                                </select>
+                                            </div><hr>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Login</label>
+                                                <input type="text" class="form-control" id="" name="" value="fulano"
+                                                    disabled>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal para editar -->
+                        <div class="modal fade" id="editarFuncionario-01" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Editar funcionário</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="row g-3" action="" method="post">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Nome completo</label>
+                                                <input type="text" class="form-control" id="" name="" value="Fulano Estranho" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">CPF</label>
+                                                <input type="text" class="form-control" id="" name="" value="000.000.000-00" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">E-mail</label>
+                                                <input type="email" class="form-control" id="" name="" value="fulano@gmail.com" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Celular</label>
+                                                <input type="text" class="form-control" id="" name="" value="(000) 00000-0000" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Função</label>
+                                                <select class="form-select" id="" name="" required>
+                                                    <option disabled>Selecione...</option>
+                                                    <option value="administrador" selected>Administrador</option>
+                                                    <option value="mecanico-chefe">Mecânico-Chefe</option>
+                                                    <option value="mecanico">Mecânico</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Status</label>
+                                                <select class="form-select" id="" name="" required>
+                                                    <option disabled>Selecione...</option>
+                                                    <option value="administrador" selected>Ativo</option>
+                                                    <option value="mecanico-chefe">Inativo</option>
+                                                </select>
+                                            </div>
+                                            <hr>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Login</label>
+                                                <input type="text" class="form-control" id="" name="" value="fulano" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Senha</label>
+                                                <input type="password" class="form-control" id="password" name="" value="123456" required>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="showPassword" id="flexCheckDefault">
+                                                    <label class="form-check-label">Exibir senha</label>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                <button type="submit" class="btn btn-primary">Editar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal para excluir -->
+                        <div class="modal fade" id="excluirFuncionario-01" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-danger" data-bs-theme="dark">
+                                        <h1 class="modal-title fs-5 text-white">Excluir funcionário</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">Tem certeza que deseja excluir o cadastro do funcionário?</div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-danger">Excluir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim do card -->
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('showPassword');
+
+        showPasswordCheckbox.addEventListener('change', function () {
+            if (showPasswordCheckbox.checked) {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
+    </script>
+</body>
+
+</html>
