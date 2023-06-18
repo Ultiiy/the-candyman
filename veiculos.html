@@ -13,7 +13,8 @@
 
 <body>
     <div class="d-flex">
-        <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white" style="width: 5rem; background-color: #131336;">
+        <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white"
+            style="width: 5rem; background-color: #131336;">
             <a href="home.html" class="text-decoration-none">
                 <h1 class="text-white text-center">T</h1>
             </a>
@@ -54,8 +55,10 @@
             </div>
         </div>
         <!-- offcanvas do menu -->
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" style="width: 280px;">
-            <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white" style="width: 280px; background-color: #131336;">
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+            id="offcanvasScrolling" style="width: 280px;">
+            <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white"
+                style="width: 280px; background-color: #131336;">
                 <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
                     data-bs-dismiss="offcanvas"></button>
                 <a href="home.html" class="text-decoration-none text-white">
@@ -117,42 +120,23 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="row g-3" action="" method="post">
-                                        <div class="col-md-6">
+                                        <div class="col-md-3">
                                             <label class="form-label">Placa</label>
+                                            <input type="text" class="form-control" id="" name="" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Veículo</label>
                                             <input type="text" class="form-control" id="" name="" required>
                                         </div>
                                         <div class="col-md-3">
                                             <label class="form-label">Ano</label>
                                             <input type="text" class="form-control" id="" name="" required>
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Marca</label>
-                                            <input type="text" class="form-control" id="" name="" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label">Modelo</label>
-                                            <input type="text" class="form-control" id="" name="" required>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label">Cor</label>
-                                            <select class="form-select" id="" name="" required>
-                                                <option selected disabled>Selecione...</option>
-                                                <option value="branco">Branco</option>
-                                                <option value="cinza">Cinza</option>
-                                                <option value="preto">Preto</option>
-                                                <option value="prata">Prata</option>
-                                                <option value="azul">Azul</option>
-                                                <option value="vermelho">Vermelho</option>
-                                                <option value="marrom/bege">Marrom/Bege</option>
-                                                <option value="verde">Verde</option>
-                                                <option value="amarelo">Amarelo</option>
-                                            </select>
-                                        </div>
                                         <div class="col-md-4">
                                             <label class="form-label">Quilometragem</label>
                                             <div class="input-group">
-                                                <span class="input-group-text">KM</span>
                                                 <input type="text" class="form-control" id="" name="" required>
+                                                <span class="input-group-text">KM</span>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -176,9 +160,7 @@
                 <thead>
                     <tr>
                         <th scope="col">CÓDIGO</th>
-                        <th scope="col">PLACA</th>
-                        <th scope="col">MARCA</th>
-                        <th scope="col">MODELO</th>
+                        <th scope="col">Veículo</th>
                         <th scope="col">QUILOMETRAGEM</th>
                         <th scope="col">OPÇÕES</th>
                     </tr>
@@ -187,9 +169,7 @@
                     <!-- Começa aqui (Cada linha da tabela) -->
                     <tr>
                         <th scope="row">01</th>
-                        <td>AAA0000</td>
-                        <td>Toyota</td>
-                        <td>Corolla</td>
+                        <td>Toyota cdd</td>
                         <td>10.000km</td>
                         <td>
                             <div class="btn-group" role="group">
@@ -213,47 +193,27 @@
                                         </div>
                                         <div class="modal-body">
                                             <form class="row g-3" action="" method="post">
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <label class="form-label">Placa</label>
                                                     <input type="text" class="form-control" id="" name=""
                                                         value="AAA0000" disabled>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label">Veículo</label>
+                                                    <input type="text" class="form-control" id="" name=""
+                                                        value="Toyota cdd" disabled>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label class="form-label">Ano</label>
                                                     <input type="text" class="form-control" id="" name="" value="2016"
                                                         disabled>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Marca</label>
-                                                    <input type="text" class="form-control" id="" name="" value="Toyota"
-                                                        disabled>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Modelo</label>
-                                                    <input type="text" class="form-control" id="" name=""
-                                                        value="Corolla" disabled>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="form-label">Cor</label>
-                                                    <select class="form-select" id="" name="" disabled>
-                                                        <option selected disabled>Selecione...</option>
-                                                        <option value="branco">Branco</option>
-                                                        <option value="cinza">Cinza</option>
-                                                        <option value="preto">Preto</option>
-                                                        <option value="prata">Prata</option>
-                                                        <option value="azul">Azul</option>
-                                                        <option value="vermelho" selected>Vermelho</option>
-                                                        <option value="marrom/bege">Marrom/Bege</option>
-                                                        <option value="verde">Verde</option>
-                                                        <option value="amarelo">Amarelo</option>
-                                                    </select>
-                                                </div>
                                                 <div class="col-md-4">
                                                     <label class="form-label">Quilometragem</label>
                                                     <div class="input-group">
-                                                        <span class="input-group-text">KM</span>
                                                         <input type="text" class="form-control" id="" name=""
                                                             value="10.000" disabled>
+                                                        <span class="input-group-text">KM</span>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
@@ -277,47 +237,27 @@
                                         </div>
                                         <div class="modal-body">
                                             <form class="row g-3" action="" method="post">
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <label class="form-label">Placa</label>
                                                     <input type="text" class="form-control" id="" name=""
                                                         value="AAA0000" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label">Veículo</label>
+                                                    <input type="text" class="form-control" id="" name=""
+                                                        value="Toyota Cdd" required>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <label class="form-label">Ano</label>
                                                     <input type="text" class="form-control" id="" name="" value="2016"
                                                         required>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Marca</label>
-                                                    <input type="text" class="form-control" id="" name="" value="Toyota"
-                                                        required>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label class="form-label">Modelo</label>
-                                                    <input type="text" class="form-control" id="" name=""
-                                                        value="Corolla" required>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="form-label">Cor</label>
-                                                    <select class="form-select" id="" name="" required>
-                                                        <option selected disabled>Selecione...</option>
-                                                        <option value="branco">Branco</option>
-                                                        <option value="cinza">Cinza</option>
-                                                        <option value="preto">Preto</option>
-                                                        <option value="prata">Prata</option>
-                                                        <option value="azul">Azul</option>
-                                                        <option value="vermelho" selected>Vermelho</option>
-                                                        <option value="marrom/bege">Marrom/Bege</option>
-                                                        <option value="verde">Verde</option>
-                                                        <option value="amarelo">Amarelo</option>
-                                                    </select>
-                                                </div>
                                                 <div class="col-md-4">
                                                     <label class="form-label">Quilometragem</label>
                                                     <div class="input-group">
-                                                        <span class="input-group-text">KM</span>
                                                         <input type="text" class="form-control" id="" name=""
                                                             value="10.000" required>
+                                                        <span class="input-group-text">KM</span>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
