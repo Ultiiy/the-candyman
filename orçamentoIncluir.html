@@ -129,31 +129,30 @@
 
         <div class="space-siderbar p-4 px-5" style="width: 100%; height: 100vh; margin-left: 5rem;">
             <span>
-                
                 <h1 class="text-end mt-2 m-0 fw-bold">Orçamentos</h1>
-                <h5 class="text-end mb-3">Alterar</h5>
+                <h5 class="text-end mb-3">Cadastrar</h5>
             </span>
             <form action="" method="post">
                 <div>
                     <h5>Informações do cliente:</h5>
                     <form action="" method="post">
                         <div class="input-group mb-3" style="width: 15%;">
-                            <input type="text" class="form-control" id="" name="" placeholder="CPF" value="cpf da pessoa" required> 
+                            <input type="text" class="form-control" id="" name="" placeholder="CPF">
                             <button class="btn btn-outline-secondary" type="button">Buscar</button>
                         </div>
                     </form>
                     <div class="row g-3">
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="" name="" placeholder="Nome completo" value="nome da pessoa" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Nome completo" required>
                         </div>
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="" name="" placeholder="E-mail" value="email da pessoa" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="E-mail" required>
                         </div>
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="" name="" placeholder="Celular" value="celular da pessoa" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Celular" required>
                         </div>
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="" name="" placeholder="Endereço" value="endereco da pessoa" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Endereço" required>
                         </div>
                     </div>
                 </div><br>
@@ -161,19 +160,19 @@
                     <h5>Veículo do cliente:</h5>
                     <form action="" method="post">
                         <div class="input-group mb-3" style="width: 15%;">
-                            <input type="text" class="form-control" id="" name="" placeholder="Placa" value="placa do carro da pessoa" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Placa">
                             <button class="btn btn-outline-secondary" type="button">Buscar</button>
                         </div>
                     </form>
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <input type="text" class="form-control" id="" name="" placeholder="Veículo" value="toyota cdd" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Veículo" required>
                         </div>
                         <div class="col-md-1">
-                            <input type="text" class="form-control" id="" name="" placeholder="Ano" value="1543" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Ano" required>
                         </div>
                         <div class="col-md-2">
-                            <input type="text" class="form-control" id="" name="" placeholder="Quilometragem" value="4243424" required>
+                            <input type="text" class="form-control" id="" name="" placeholder="Quilometragem" required>
                         </div>
                     </div>
                 </div><br>
@@ -249,7 +248,8 @@
                                         <th scope="row">1</th>
                                         <td colspan="2">Troca de pastilha de freio</td>
                                         <td>R$ 60,12</td>
-                                        <td><button class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></td>
+                                        <td><button class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -262,22 +262,22 @@
                     <div class="row g-3">
                         <div class="col-md-2">
                             <label class="form-label">Valor dos produtos</label>
-                            <input type="text" class="form-control" id="" name="" value="R$ 34,23">
+                            <input type="text" class="form-control" id="" name="" value="R$ 34,23" disabled>
                         </div>
                         <div class="col-md-2">
                             <label class="form-label">Valor dos serviços</label>
-                            <input type="text" class="form-control" id="" name="" value="R$ 60,12">
+                            <input type="text" class="form-control" id="" name="" value="R$ 60,12" disabled>
                         </div>
                         <div class="col-md-2">
                             <label class="form-label">Desconto</label>
-                            <input type="text" class="form-control" id="" name="" value="R$ 0">
+                            <input type="text" class="form-control" id="" name="">
                         </div>
                     </div><br>
                     <div class="mb-3 w-25">
                         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">texto</textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <a href="orcamentos.html" class="btn btn-primary">Voltar</a><br>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button><br>
                 </div>
             </form>
         </div>
