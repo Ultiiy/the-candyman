@@ -163,14 +163,18 @@
                         <td>R$ 94,35</td>
                         <td>Em analise</td>
                         <td>
-                            <div class="d-grid gap-2 d-md-block">
-                                <a href="orcamentoConsultar.html?codigo=" class="btn btn-primary">Visualizar</a>
-                                <a href="orcamentoAlterar.html?codigo=" class="btn btn-secondary">Editar</a>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#excluirCliente-01" title="Deletar"><i
-                                        class="bi bi-trash"></i></button>
-                            </div>
-
+                            <div class="hstack gap-3">
+                                <div class="p-2">
+                                    <a href="orcamentoConsultar.html?codigo=" class="btn btn-primary">Visualizar</a>
+                                    <a href="orcamentoAlterar.html?codigo=" class="btn btn-secondary">Editar</a>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#excluirCliente-01" title="Deletar"><i class="bi bi-trash"></i></button>
+                                </div>
+                                <div class="vr"></div>
+                                <div class="p-2">
+                                    <button class="btn btn-success" title="Aceito"><i class="bi bi-check-lg"></i></button>
+                                    <button class="btn btn-danger" title="Recusado"><i class="bi bi-x-lg"></i></button>
+                                </div>
+                              </div>
 
                             <!-- Modal para excluir -->
                             <div class="modal fade" id="excluirCliente-01" tabindex="-1">
