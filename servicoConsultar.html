@@ -128,34 +128,17 @@
 
         <div class="space-siderbar p-4 px-5" style="width: 100%; height: 100vh; margin-left: 5rem;">
             <span>
-                <h1 class="text-end mt-2 m-0 fw-bold">Orçamentos</h1>
-                <h5 class="text-end mb-3">Alterar</h5>
+                <h1 class="text-end mt-2 m-0 fw-bold">Ordem de serviço</h1>
+                <h5 class="text-end mb-3">Consulta</h5>
             </span>
             <form action="" method="post">
                 <div>
                     <h5>Informações do cliente:</h5>
-                    <form action="" method="post">
-                        <div class="input-group mb-3" style="width: 15%;">
-                            <input type="text" class="form-control" id="" name="" value="CPF">
-                            <button class="btn btn-outline-secondary" type="button">Buscar</button>
-                        </div>
-                    </form>
+
                     <div class="row g-3">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label>Nome completo</label>
-                            <input type="text" class="form-control" id="" name="" value="Nome completo" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label>E-mail</label>
-                            <input type="text" class="form-control" id="" name="" value="E-mail" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label>Celular</label>
-                            <input type="text" class="form-control" id="" name="" value="Celular" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label>Endereço</label>
-                            <input type="text" class="form-control" id="" name="" value="Endereço" required>
+                            <input type="text" class="form-control" id="" name="" value="Nome completo" disabled>
                         </div>
                     </div>
                 </div><br>
@@ -163,28 +146,26 @@
                     <h5>Veículo do cliente:</h5>
                     <form action="" method="post">
                         <div class="d-flex">
-                            <div class="input-group mb-3" style="width: 15%;">
-                                <input type="text" class="form-control" id="" name="" value="Placa">
-                                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                            <div class="mb-3" style="width: 15%;">
+                                <label>Placa</label>
+                                <input type="text" class="form-control" id="" name="" value="Placa" disabled>
                             </div>
-                            <div>
-                                <button class="btn btn-secondary mx-3">Adicionar outro veículo</button>
-                            </div>
+
                         </div>
                     </form>
                     <div class="row g-3">
                         <div class="col-md-3">
                             <label>Veículo</label>
-                            <input type="text" class="form-control" id="" name="" value="Veículo" required>
+                            <input type="text" class="form-control" id="" name="" value="Veículo" disabled>
                         </div>
                         <div class="col-md-2">
                             <label>Ano</label>
-                            <input type="text" class="form-control" id="" name="" value="Ano" required>
+                            <input type="text" class="form-control" id="" name="" value="Ano" disabled>
                         </div>
                         <div class="col-md-2">
                             <label>Quilometragem</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="" name="" value="Quilometragem" required>
+                                <input type="text" class="form-control" id="" name="" value="Quilometragem" disabled>
                                 <span class="input-group-text">KM</span>
                             </div>
                         </div>
@@ -196,24 +177,12 @@
                         <div class="hstack gap-3">
                             <div class="col p-2">
                                 <h5>Produtos</h5>
-                                <form action="" method="post">
-                                    <div class="input-group mb-3 w-50">
-                                        <input type="text" class="form-control" id="" name=""
-                                            placeholder="Busque por produtos...">
-                                        <button class="btn btn-outline-secondary" type="button"><i
-                                                class="bi bi-plus"></i></button>
-                                    </div>
-                                    <datalist id="datalistOptions">
-                                        <option value="Óleo Lubrificante do Motor">
-                                    </datalist>
-                                </form>
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
                                             <th colspan="2" scope="col">Descrição</th>
                                             <th scope="col">Valor</th>
-                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -221,11 +190,7 @@
                                             <th scope="row">1</th>
                                             <td colspan="2">Pastilha de freio</td>
                                             <td>R$ 34,23</td>
-                                            <td><button class="btn btn-danger"><i
-                                                        class="bi bi-trash3-fill"></i></button>
-                                            </td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -245,22 +210,22 @@
                                         <label>Valor da mão de obra</label>
                                         <div class="input-group">
                                             <span class="input-group-text">R$</span>
-                                            <input type="text" class="form-control" id="" name="" value="0" required>
+                                            <input type="text" class="form-control" id="" name="" value="0" disabled>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <label>Desconto</label>
                                         <div class="input-group">
                                             <span class="input-group-text">R$</span>
-                                            <input type="text" class="form-control" id="" name="" value="0" required>
+                                            <input type="text" class="form-control" id="" name="" value="0" disabled>
                                         </div>
                                     </div>
                                 </div><br>
                                 <div class="mb-3">
                                     <label class="form-label">Observações</label>
-                                    <textarea class="form-control" id="" name="" rows="4"></textarea>
+                                    <textarea class="form-control" id="" name="" rows="4" disabled>alguma coisa</textarea>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Alterar</button><br><br>
+                                <a href="servicos.html" class="btn btn-secondary">Voltar</a><br><br>
                             </div>
                         </div>
                     </div>
