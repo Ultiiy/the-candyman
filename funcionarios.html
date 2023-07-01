@@ -12,7 +12,8 @@
 
 <body>
     <div class="d-flex">
-        <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white" style="width: 5rem; background-color: #131336;">
+        <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white"
+            style="width: 5rem; background-color: #131336;">
             <a href="home.html" class="text-decoration-none">
                 <h1 class="text-white text-center">T</h1>
             </a>
@@ -33,7 +34,9 @@
                 <li><a href="relatorio.html" class="nav-link text-white" title="Relatório"><i
                             class="bi bi-graph-up"></i></a></li>
             </ul>
-            <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"><i class="bi bi-list" style="font-size: 24px;"></i></button><hr>
+            <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"><i
+                    class="bi bi-list" style="font-size: 24px;"></i></button>
+            <hr>
             <div class="dropdown">
                 <span class="m-0 d-flex align-items-center text-decoration-none dropdown-toggle"
                     style="cursor: pointer;" data-bs-toggle="dropdown">
@@ -53,7 +56,8 @@
         <!-- offcanvas do menu -->
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
             id="offcanvasScrolling" style="width: 280px;">
-            <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white" style="width: 280px; background-color: #131336;">
+            <div class="fixed-bottom d-flex flex-column p-3 h-100 text-white"
+                style="width: 280px; background-color: #131336;">
                 <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
                     data-bs-dismiss="offcanvas"></button>
                 <a href="home.html" class="text-decoration-none text-white">
@@ -76,7 +80,9 @@
                     <li><a href="relatorio.html" class="nav-link text-white"><i
                                 class="bi bi-graph-up"></i>&ensp;Relatórios</a></li>
                 </ul>
-                <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"><i class="bi bi-list" style="font-size: 24px;"></i></button><hr>
+                <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"><i
+                        class="bi bi-list" style="font-size: 24px;"></i></button>
+                <hr>
                 <div class="dropdown">
                     <span class="m-0 d-flex align-items-center text-decoration-none dropdown-toggle"
                         style="cursor: pointer;" data-bs-toggle="dropdown">
@@ -128,7 +134,7 @@
                                             <input type="text" class="form-control" id="" name="" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">Função</label>
+                                            <label class="form-label">Cargo</label>
                                             <select class="form-select" id="" name="" required>
                                                 <option selected disabled>Selecione...</option>
                                                 <option value="administrador">Administrador</option>
@@ -165,13 +171,13 @@
             <div class="cards-fun d-flex flex-wrap justify-content-between">
 
                 <!-- Inicio do card -->
-                <div class="card shadow me-3 mt-3" style="width: 15rem; height: 26.3rem;">
+                <div class="card shadow me-3 mt-3">
                     <img src="https://www.gov.br/cdn/sso-status-bar/src/image/user.png" class="recard-img-top">
                     <div class="card-body">
                         <ul class="card-text p-0" type="none">
                             <li><b>Matrícula</b>: 0001</li>
                             <li><b>Nome</b>: Fulano</li>
-                            <li><b>Função</b>: Administrador</li>
+                            <li><b>Cargo</b>: Administrador</li>
                             <li><b>Status</b>: Ativo</li>
                         </ul>
                         <div class="btn-group d-flex" role="group">
@@ -180,8 +186,7 @@
                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                                 data-bs-target="#editarFuncionario-01">Editar</button>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#excluirFuncionario-01" title="Deletar"><i
-                                    class="bi bi-trash"></i></button>
+                                data-bs-target="#excluirFuncionario-01" title="Deletar">Desativar</button>
                         </div>
 
                         <!-- Modal para visualizar -->
@@ -199,7 +204,7 @@
                                             <div class="col-md-6">
                                                 <label class="form-label">Nome completo</label>
                                                 <input type="text" class="form-control" id="" name=""
-                                                    value="Fulano Estranho" disabled>
+                                                    value="Fulano" disabled>
                                             </div>
                                             <div class="col-md-6">
                                                 <label class="form-label">CPF</label>
@@ -215,7 +220,6 @@
                                                 <label class="form-label">Cargo</label>
                                                 <select class="form-select" id="" name="" disabled>
                                                     <option disabled>Selecione...</option>
-                                                    <option value="administrador" selected>Administrador</option>
                                                     <option value="mecanico-chefe">Mecânico-Chefe</option>
                                                     <option value="mecanico">Mecânico</option>
                                                 </select>
@@ -274,7 +278,6 @@
                                                 <label class="form-label">Cargo</label>
                                                 <select class="form-select" id="" name="" required>
                                                     <option disabled>Selecione...</option>
-                                                    <option value="administrador" selected>Administrador</option>
                                                     <option value="mecanico-chefe">Mecânico-Chefe</option>
                                                     <option value="mecanico">Mecânico</option>
                                                 </select>
@@ -317,12 +320,12 @@
                                         <h1 class="modal-title fs-5 text-white">Excluir funcionário</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
-                                    <div class="modal-body">Tem certeza que deseja excluir o cadastro do funcionário?
+                                    <div class="modal-body">Tem certeza que deseja desativar o cadastro do funcionário?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-danger">Excluir</button>
+                                        <button type="button" class="btn btn-danger">Desativar</button>
                                     </div>
                                 </div>
                             </div>
